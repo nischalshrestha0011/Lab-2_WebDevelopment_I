@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors Example</title>
+
+    <style>
+        /* Universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Combination selector (element + class) */
+        p.highlight {
+            color: blue;
+            font-size: 18px;
+        }
+
+        /* Combination selector (descendant) */
+        div section p {
+            color: green;
+        }
+
+        /* Attribute selector */
+        input[type="email"] {
+            border: 2px solid purple;
+            padding: 5px;
+        }
+
+        /* Pseudo-class selector */
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        /* Pseudo-element selector */
+        h2::first-letter {
+            font-size: 30px;
+            color: orange;
+        }
+
+        /* Pseudo-element */
+        p::after {
+            content: " ✓";
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Selector Demonstration</h2>
+
+    <p class="highlight">This paragraph uses combination selector.</p>
+
+    <div>
+        <section>
+            <p>This paragraph uses descendant selector.</p>
+        </section>
+    </div>
+
+    <br>
+
+    <input type="email" placeholder="Enter email">
+
+    <br><br>
+
+    <a href="#">Hover over this link</a>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function expression or anonimous expression
+        var area =function(width,length){
+            return width*length;
+        }
+        var s=area(20,10);
+        document.write(s)
+        //immediately invoked function(direct call hunxa function call garirakhnu pardaina)
+        var area=(function(){
+            var lenth=10;
+            var breadth=20;
+            return lenth*breadth;
+        }());//() means function immediately invoke hunu
+        document.write(area);
+    </script>
+</body>
+</html>

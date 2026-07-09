@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="signup">
+        Name: <input type="text" name="name"><br>
+        Phone: <input type="number" name="phone"><br>
+        Country:<select name="country">
+            <option value="-1">select one country</option>
+            <option value="1">Nepal</option>
+            <option value="2">Bangladesh</option>
+            <option value="3">Qatar</option>
+            <option value="4">China</option>
+        </select>
+        Gender: 
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female <br>
+        Date Of Birth: <input type="text" name="dob">
+        Email: <input type="text" name="email">
+        <input type="button" name="bttn" value="click" onclick="validate()">
+    </form>
+    <script>
+        function validate(){
+            let name=document.signup.name.value;
+            let phone=document.signup.phone.value;
+            let country=document.signup.country.value;
+            let email=document.signup.email.value;
+            //nischal@gmail.com
+            //nischal.shrestha@gmail.com
+            //{a-zA-Z0-9_}
+            let regemail=/^\w+([\.-]?\w+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
+            if(!email.match(regemail)){
+                alert("Enter valid email");
+            }
+            let regname=/^[A-Za-z ]+$/;
+            let regphone=/^(98|97)[0-9]{8}$/;
+            if(!name.match(regname)){
+                alert("Write proper name");
+            }
+            if(!phone.match(regphone)){
+                alert("Enter validnumber");
+            }
+            if(country ==="-1"){
+                alert("Select any one country");
+            }
+            let gender=document.signup.gender;
+            for(var i=0;i<gender.length;i++){
+                if(gender[i].checked){
+                gendercheck=gender[i].value;
+                 break;
+                }
+            }
+            if(i==gender.length){
+                alert("Enter valid gender");
+            }
+            let dob=document.signup.dob.value;
+            let regdob=/^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9])|3[0-2]-[0-9]{4}$/
+            if(!dob.match(regdob)){
+                alert("Enter valid Date of birth");
+            }
+        }
+    </script>
+</body>
+</html>

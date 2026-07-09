@@ -1,0 +1,24 @@
+<!-- write a program on a js that display sum of 2 digits -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="frrm">
+        First:<input type="number" name="frst"><br>
+        Second:<input type="number" name="second"><br>
+        Sum:
+        <input type="button" name="bttn" value=" button" onclick="sum()">
+        <script>
+            function sum(){
+                var a=Number(document.frrm.frst.value);
+                var b=Number(document.frrm.second.value);
+                document.write(a+b);
+            }
+        </script>
+    </form>
+</body>
+</html>
